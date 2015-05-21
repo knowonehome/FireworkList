@@ -11,7 +11,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150521163937) do
+ActiveRecord::Schema.define(version: 20150521203836) do
+
+  create_table "fireworks", force: true do |t|
+    t.string   "firework_name"
+    t.string   "style"
+    t.text     "description"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false

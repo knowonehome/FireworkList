@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  firework_name: MyString
+  style: MyString
+  description: MyText
+
+two:
+  firework_name: MyString
+  style: MyString
+  description: MyText
