@@ -11,7 +11,14 @@
 <p class="notice"><%= notice %></p>
 <p class="alert"><%= alert %></p>
 
-<%= yield %>
+<div class="container">
+  <ul class="nav nav-tabs">
+    <li><%= link_to "Home", root_path %></li>
+    <li><%= link_to "Fireworks", welcome_fireworks_path %></li>
+    <li><%= link_to "Login", root_path %></li>
+  </ul>
 
+  <%= yield %>
+</div>
 </body>
 </html>
