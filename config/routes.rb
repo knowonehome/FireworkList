@@ -1,10 +1,9 @@
 Rails.application.routes.draw do
   resources :fireworks
 
-  devise_for :users
-  get 'welcome/index'
+  
+  root to: 'fireworks#index'
 
-  get 'welcome/fireworks'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
