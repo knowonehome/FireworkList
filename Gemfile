@@ -13,12 +13,17 @@ gem 'bootstrap-sass'
         gem 'sdoc', '~> 0.4.0'
     end
 
-    group :development do
+    group :development, :test do
         gem 'spring'
         gem 'sqlite3'
+        gem 'rspec-rails', '~> 3.3.3'
     end
-    
+
+    group :test do
+        gem 'capybara', '~> 2.4.4'
+    end
+
     group :production do
-        gem 'pg'
+       
     end
 
