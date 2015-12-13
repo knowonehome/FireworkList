@@ -11,7 +11,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150522133508) do
+ActiveRecord::Schema.define(version: 20151212233033) do
+
+  create_table "firework_details", force: true do |t|
+    t.integer  "cost"
+    t.integer  "purchased"
+    t.integer  "firework_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "firework_details", ["firework_id"], name: "index_firework_details_on_firework_id"
 
   create_table "fireworks", force: true do |t|
     t.string   "firework_name"

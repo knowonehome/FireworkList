@@ -1,0 +1,31 @@
+<%= form_for(@firework_detail) do |f| %>
+  <% if @firework_detail.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@firework_detail.errors.count, "error") %> prohibited this firework_detail from being saved:</h2>
+
+      <ul>
+      <% @firework_detail.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :cost %><br>
+    <%= f.text_field :cost %>
+  </div>
+  <div class="field">
+    <%= f.label :purchased %><br>
+    <%= f.text_field :purchased %>
+  </div>
+  <div class="field">
+    <%= f.label :firework_name %><br>
+    <%= f.collection_select :firework_id, Firework.all, :id, :name, prompt: true %>
+  <br>
+  </div>
+  <div class="actions">
+    <br>
+    <%= f.submit %>
+  </div>
+<% end %>
