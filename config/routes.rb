@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  devise_for :users
+  resources :firework_years
+  resources :firework_comments
   resources :firework_years
 
   resources :firework_details
