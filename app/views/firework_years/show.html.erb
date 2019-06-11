@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Cost:</strong>
+  <%= @firework_year.cost %>
+</p>
+
+<p>
+  <strong>Purchased:</strong>
+  <%= @firework_year.purchased %>
+</p>
+
+<p>
+  <strong>Year:</strong>
+  <%= @firework_year.year %>
+</p>
+
+<p>
+  <strong>Firework:</strong>
+  <%= @firework_year.firework_id %>
+</p>
+
+<%= link_to 'Edit', edit_firework_year_path(@firework_year) %> |
+<%= link_to 'Back', firework_years_path %>
