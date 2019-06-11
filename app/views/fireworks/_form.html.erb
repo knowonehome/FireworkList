@@ -1,0 +1,32 @@
+<%= form_with(model: firework, local: true) do |form| %>
+  <% if firework.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(firework.errors.count, "error") %> prohibited this firework from being saved:</h2>
+
+      <ul>
+        <% firework.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :firework_name %>
+    <%= form.text_field :firework_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :style %>
+    <%= form.text_field :style %>
+  </div>
+
+  <div class="field">
+    <%= form.label :description %>
+    <%= form.text_area :description %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
