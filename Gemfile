@@ -15,7 +15,7 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 gem 'sprockets-rails', '~> 3.0', '>= 3.0.4'
 gem 'sdoc', '~> 0.4.0', group: :doc
-gem 'devise', '~> 4.1', '>= 4.1.1'
+gem 'devise', '~> 4.7'
 
 
 group :development, :test do
